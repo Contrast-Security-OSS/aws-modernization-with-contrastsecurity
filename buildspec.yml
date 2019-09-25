@@ -18,7 +18,7 @@ phases:
       - git config --global credential.helper '!aws codecommit credential-helper $@'
       - git config --global credential.UseHttpPath true
       - git init
-      - git remote add origin https://git-codecommit.us-west-2.amazonaws.com/v1/repos/modernization-workshop
+      - git remote add origin $APP_SOURCE_REPO_URL
       - git fetch
       - git checkout -f "$CODEBUILD_RESOLVED_SOURCE_VERSION"
       - git submodule init
@@ -27,7 +27,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - cd app
+      - cd modules/30_workshop_app
       - docker build -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
   post_build:
