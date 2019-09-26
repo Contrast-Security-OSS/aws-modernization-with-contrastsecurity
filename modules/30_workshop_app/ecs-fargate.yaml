@@ -60,7 +60,7 @@ Resources:
     Properties: 
       PolicyName: ContrastSecretsManagerPolicy
       Roles:
-      - AmazonECSTaskExecutionRolePolicy
+      - FargateExecutionRole
       PolicyDocument:
         Version: 2012-10-17
         Statement:
@@ -114,7 +114,8 @@ Resources:
         - "FARGATE"
       ContainerDefinitions: 
         - Name: modernization-workshop
-          Image: ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/modernization-workshop:latest
+          Image:
+            Fn::Sub: '${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/modernization-workshop:latest'
           Cpu: 1024
           Memory: 2048
           Environment:
