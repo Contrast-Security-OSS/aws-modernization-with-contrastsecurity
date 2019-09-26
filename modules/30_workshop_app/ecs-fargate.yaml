@@ -60,7 +60,7 @@ Resources:
     Properties: 
       PolicyName: ContrastSecretsManagerPolicy
       Roles:
-      - ContrastAWSWorkshopECSExecutionRole
+      - AmazonECSTaskExecutionRolePolicy
       PolicyDocument:
         Version: 2012-10-17
         Statement:
@@ -97,7 +97,7 @@ Resources:
         - "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
         - "arn:aws:iam::aws:policy/CloudWatchLogsFullAccess"
         - "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"      
-        - arn:aws:iam::aws:policy/SecretsManagerReadWrite
+        - "arn:aws:iam::aws:policy/SecretsManagerReadWrite"
       RoleName: "FargateExecutionRole"
 
   TaskDefinition:
