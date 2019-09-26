@@ -48,7 +48,7 @@ docker push $(aws ecr describe-repositories --repository-name modernization-work
 If you watch the screen you should see the docker image build process animating the terminal
 
 {{% notice info %}}
-If successfully, you should see the message as below.
+If successful, you should see the message as below.
 {{% /notice %}}
 
 <pre>

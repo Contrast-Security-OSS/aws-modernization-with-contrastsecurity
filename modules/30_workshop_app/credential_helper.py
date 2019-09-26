@@ -4,10 +4,12 @@ abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
 
+print("##### Opening contrast_security.yaml #####")
 parameters = list()
 with open('./contrast_security.yaml') as src:
     config = yaml.safe_load(src)
 
+print("##### Converting to CloudFormation parameters file #####")
 vpc_stack_name = "ModernizationVPC"
 desired_count = "1"
 
@@ -24,5 +26,8 @@ parameters.append({"ParameterKey": "ContrastServiceKey","ParameterValue": servic
 parameters.append({"ParameterKey": "ContrastUserName","ParameterValue": user_name})
 parameters.append({"ParameterKey": "DesiredCount", "ParameterValue": desired_count})
 
+print("##### Creating ecs-parameters.json file #####")
 with open ('./ecs-parameters.json', 'w') as dest:
     json.dump(parameters,dest, indent=4, sort_keys=True)
+
+print("##### Done... Completed successfully. #####")

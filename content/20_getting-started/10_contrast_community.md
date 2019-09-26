@@ -1,15 +1,18 @@
 +++
-title = "Setup a Contrast Security CE Account"
+title = "Setup Contrast CE Account"
 chapter = false
 weight = 1
 +++
 
-Contrast Community Edition (CE) is a free application security platform for Java applications and APIs (other languages coming soon).
+Contrast Security's Community Edition (CE) is a free application security platform for Java applications and APIs.
 
-1. If you don't have a Contrast CE account, [create one now] (https://www.contrastsecurity.com/community-edition-lp-website)
-2. After logging in, click the +Add Agent button in the top right:
+1. If you don't have a Contrast CE account, [create one now](https://www.contrastsecurity.com/community-edition-lp-website)
+
+2. After logging in, click the `+Add Agent` button in the top right:
 {{< figure src="/images/ce_1.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
-3. Go to the second step:
+
+3. Click `Skip` to go to the second step:
 {{< figure src="/images/ce_2.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
-4. Download config file:
+
+4. Click `Download Config File` to download the `contrast_security.yaml` file, which will be used in the next section
 {{< figure src="/images/ce_3.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
