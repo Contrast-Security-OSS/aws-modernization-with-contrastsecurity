@@ -1,12 +1,9 @@
 +++
 title = "About Contrast Security"
 date = 2019-08-11T19:21:12-07:00
-weight = 10
+weight = 5
 chapter = false
 +++
-
-
-
 
 <p style='text-align: left;'>
 Contrast Security is an automated security testing solution that infuses software with vulnerability assessment capabilities so that security flaws are automatically identified. Contrast Security utilizes dynamic binary instrumentation to identify vulnerabilities in web applications and APIs. Organizations can use Contrast Assess to secure their applications without changing the application software stack, or how they build, test, or deploy code. The result is accurate, continuous vulnerability assessment that integrates seamlessly with existing software development and security processes, scales across the software development lifecycle and the entire application portfolio, and easily outpaces traditional solutions.

@@ -1,10 +1,10 @@
 +++
-title = "Setup a Contrast Security Community Edition Account"
+title = "Setup a Contrast Security CE Account"
 chapter = false
 weight = 1
 +++
 
-Contrast CE is a free application security platform for Java applications and APIs (other languages coming soon).
+Contrast Community Edition (CE) is a free application security platform for Java applications and APIs (other languages coming soon).
 
 1. If you don't have a Contrast CE account, [create one now] (https://www.contrastsecurity.com/community-edition-lp-website)
 2. After logging in, click the +Add Agent button in the top right:

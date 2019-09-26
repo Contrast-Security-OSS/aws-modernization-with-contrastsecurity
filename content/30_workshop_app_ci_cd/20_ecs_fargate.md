@@ -9,7 +9,7 @@ In the following set of commands we are going to use CloudFormation to deploy se
 
 ```bash
 cd ~/environment/modernization-workshop/modules/30_workshop_app
-aws cloudformation create-stack --stack-name WorkshopECS --template-body file://ecs-fargate.yaml --capabilities CAPABILITY_NAMED_IAM
+aws cloudformation create-stack --stack-name WorkshopECS --template-body file://ecs-fargate.yaml --capabilities CAPABILITY_NAMED_IAM --parameters file://ecs-parameters.json
 
 until [[ `aws cloudformation describe-stacks --stack-name "WorkshopECS" --query "Stacks[0].[StackStatus]" --output text` == "CREATE_COMPLETE" ]]; do  echo "The stack is NOT in a state of CREATE_COMPLETE at `date`";   sleep 30; done && echo "The Stack is built at `date` - Please proceed"
 ```
@@ -34,4 +34,6 @@ To test, run the following query and copy the URL you obtain from the output int
 aws elbv2 describe-load-balancers --names="Modernization-Workshop-LB" --query="LoadBalancers[0].DNSName" --output=text
 ```
 
-![Java Pet Store](/images/java-app.png)
+This should resolve to the following WebGoat application
+
+![WebGoat](/images/wg_0.png)

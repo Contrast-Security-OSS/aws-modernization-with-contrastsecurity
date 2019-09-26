@@ -16,7 +16,7 @@ Also this information available via API as well
 curl -X GET https://ce.contrastsecurity.com/Contrast/api/ng/{orgUuid}/libraries -H 'Authorization:{authorization-key}' -H 'API-Key:{API-Key}'
 ```
 
-The output will look like this:
+The output should look like this:
 
 ```bash
 {

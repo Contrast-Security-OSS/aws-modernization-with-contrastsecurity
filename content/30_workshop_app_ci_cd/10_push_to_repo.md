@@ -35,7 +35,7 @@ To https://git-codecommit.us-west-2.amazonaws.com/v1/repos/modernization-worksho
 Now it's time to compile and package your code.  Copy and paste the below code into Cloud9's terminal window
 
 ```bash
-cd ~/environment/modernization-workshop/app
+cd ~/environment/modernization-workshop/modules/30_workshop_app
 docker build -t modernization-workshop .
 
 docker tag modernization-workshop:latest $(aws ecr describe-repositories --repository-name modernization-workshop --query=repositories[0].repositoryUri --output=text):latest

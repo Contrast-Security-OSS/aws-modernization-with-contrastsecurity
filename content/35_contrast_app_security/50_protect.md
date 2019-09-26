@@ -4,12 +4,13 @@ chapter = false
 weight = 5
 +++
 
-Contrast Security not only shifts security left but also extends it to the right and protect running applications in productions from being exploited due to known or unknown vulnerabilities. Contrast Security uses the same instrumentation, in the fact, the same agent to do this. 
-In your Community Edition, this feature is already enabled and you can see that by navigating to Policy sub menu for WebGoat:
+Contrast Security not only shifts security left but also extends it to the right and protect running applications in productions from being exploited due to known or unknown vulnerabilities. Contrast Security uses the same agent and instrumention process to do this.
+
+In your Community Edition, this feature is already enabled by default. You can see this by navigating to Policy submenu for WebGoat:
 
 {{< figure src="/images/ce_5.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
 
-As you can see, Contrast Security is already protecting the application from exploiting most common vulnerabilities.
+As you can see, Contrast Security is already protecting the application from being exploited by the most common attacks.
 
 Now let's try attacking the application with SQL injection that Contrast discovered on the previous step. Go to the WebGoat site --> String SQL injection and add the following payload: Smith' or '98'='98. You will see that no results have found as Contrast is protecting the application. 
 
