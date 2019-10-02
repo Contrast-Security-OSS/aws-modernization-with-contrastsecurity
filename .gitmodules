@@ -7,9 +7,10 @@
 [submodule "java-app"]
 	path = java-app
 	url = https://github.com/jamesbland123/java-petstore-app.git
-[submodule "modules/30_workshop_app/WebGoat-Lessons"]
-	path = modules/30_workshop_app/WebGoat-Lessons
-	url = https://github.com/WebGoat/WebGoat-Lessons
-[submodule "modules/30_workshop_app/WebGoat"]
-	path = modules/30_workshop_app/WebGoat
-	url = https://github.com/WebGoat/WebGoat
+
+[submodule "WebGoat"]
+	path = WebGoat
+	url = https://github.com/WebGoat/WebGoat.git
+[submodule "WebGoat-Lessons"]
+	path = WebGoat-Lessons
+	url = https://github.com/WebGoat/WebGoat-Lessons.git

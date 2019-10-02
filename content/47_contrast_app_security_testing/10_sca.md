@@ -1,14 +1,14 @@
 +++
 title = "Software Composition Analysis"
 chapter = false
-weight = 3
+weight = 10
 +++
 
 Contrast Security also identifies third party components used in the application. Unlike the majority of SCA tools, Contrast Security identifies only those library that are actually loaded by the application in the runtime. It even takes one step further and identifies the number of classes used by application that helps to reduce the number of libraries that should be triaged in case they have vulnerabilities.
 
 You can view libraries by clicking on Libraries in the top menu:
 
-{{< figure src="/images/ce_libraries.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
+{{< figure src="/images/contrast/ce_libraries.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
 
 Also this information available via API as well
 

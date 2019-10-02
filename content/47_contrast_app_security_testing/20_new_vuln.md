@@ -1,7 +1,7 @@
 +++
 title = "How to discover a new vulnerability"
 chapter = false
-weight = 4
+weight = 20
 +++
 
 In this part we will discover a new vulnerability in Webgoat application and examine the finding in Contrast Security.
@@ -14,10 +14,10 @@ It is important to reiterate that Contrast Security identifies vulnerabilities b
 
 3. Enter `Smith` or any other string into the field and click on `Go` button:
 
-{{< figure src="/images/wg_1.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
+{{< figure src="/images/contrast/wg_1.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
 
 4. Go back to Contrast Security platform and click on Vulnerabilities within the `WebGoat` application. As you can see, the Contrast agent has identified new vulnerabilities: Cross-Site Scripting (XSS) and SQL injection.
 
-{{< figure src="/images/ce_4.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
+{{< figure src="/images/contrast/ce_4.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
 
 Now you can click on either vulnerabilities to get more information.

@@ -1,7 +1,7 @@
 +++
 title = "About Contrast Security"
 date = 2019-08-11T19:21:12-07:00
-weight = 5
+weight = 10
 chapter = false
 +++
 
@@ -11,7 +11,7 @@ Contrast Security is an automated security testing solution that infuses softwar
 Contrast Assess neither scans nor attacks applications, but uses patented state-of-the-art deep security instrumentation technology to combine the most effective elements of static and dynamic testing, software composition and configuration analysis technologies, and deliver them directly into applications. As you can see on the following picture, Contrast instruments not just the custom code but other elements of the application as well providing far better coverage as compared with other application security solutions.
 
 </p>
-{{< figure src="/images/contrast1.png" width="500" height="500">}}
+{{< figure src="/images/contrast/contrast1.png" width="500" height="500">}}
 
 ### Contrast differentiators
 
@@ -36,7 +36,7 @@ Contrast Security enables DevOps teams to deliver security-as-code by:
 - Automating security into the pipeline
 - Monitoring attacks the way you monitor performance
 
-{{< figure src="/images/contrast2.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
+{{< figure src="/images/contrast/contrast2.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
 
 ### How is Contrast Assess Different than SAST?
 
