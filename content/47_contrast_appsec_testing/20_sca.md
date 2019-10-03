@@ -4,19 +4,20 @@ chapter = false
 weight = 20
 +++
 
-Contrast Security also identifies third party components used in the application. Unlike the majority of SCA tools, Contrast Security identifies only those library that are actually loaded by the application in the runtime. It even takes one step further and identifies the number of classes used by application that helps to reduce the number of libraries that should be triaged in case they have vulnerabilities.
+### Software Composition Analysis (SCA)
+In addition to flaws in custom code, Contrast Security also identifies third-party components used in the application. Unlike the majority of SCA tools, Contrast Security identifies only those library that are actually loaded by the application at runtime. It even takes one step further and identifies the number of classes used by application that helps to reduce and prioritize libraries that should be triaged in case they have vulnerabilities.
 
-You can view libraries by clicking on Libraries in the top menu:
+You can view an inventory of libraries being used by the application by clicking on `Libraries` in the top menu:
 
 {{< figure src="/images/contrast/ce_libraries.png" style="border: 1px solid #000; max-width:auto; max-height:auto;">}}
 
-Also this information available via API as well
+This information is also available via the API using credentials available from `Your Account` page, available from the dropdown on the upper-right hand corner of the Contrast UI next to your user name.
 
 ```bash
 curl -X GET https://ce.contrastsecurity.com/Contrast/api/ng/{orgUuid}/libraries -H 'Authorization:{authorization-key}' -H 'API-Key:{API-Key}'
 ```
 
-The output should look like this:
+The output should look something like this:
 
 ```bash
 {

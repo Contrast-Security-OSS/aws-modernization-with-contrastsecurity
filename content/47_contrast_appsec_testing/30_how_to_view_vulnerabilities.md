@@ -20,7 +20,7 @@ There are several options to acquire information about vulnerabilities in Contra
 
 You can click on each vulnerabilities to get more information. Please note that we have done any work yet but still able to see some vulnerabilities that Contrast was able to identify.
 
-### Getting access to vulnerabilities via UI
+### Getting access to vulnerabilities via API
 
 Please review [the API documentation] (https://api.contrastsecurity.com)
 

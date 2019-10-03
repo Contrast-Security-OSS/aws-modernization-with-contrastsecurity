@@ -5,7 +5,7 @@ weight = 20
 +++
 
 ### Build and push WebGoat
-Build WebGoat with the Dockerfile we copied into the `modernization-workshop` root directory, tag it and push it to ECR.
+Now we will build WebGoat, a purposely vulnerable web application, using the Dockerfile we copied into the `modernization-workshop` root directory, tag it and push it to ECR.
 
 ```bash
 cd ~/environment/modernization-workshop
@@ -34,12 +34,18 @@ d9ff549177a9: Pushed
 latest: digest: sha256:4229b5fe142f6d321ef2ce16ff22070e410272ee140e7eec51540a823dcd315a size: 1369
 </pre>
 
-### Deploy WebGoat to Fargate Service 
-Now we are going to update the ECS FarGate CloudFormation stack to deploy the WebGoat application with Contrast Security. This will reuse the existing pipeline infrastructure to build and deploy this application.
+### Deploy WebGoat to Fargate Service
+Now we are going to delete the existing ECS Fargate CloudFormation stack so we can deploy a new stack with WebGoat, a purposely vulnerable web application, instrumented with Contrast Security. We will use the rest of the existing insfrastructuree, such as the pipeline.
 
+Let's delete the current ECS stack.
+```bash
+aws cloudformation delete-stack --stack-name WorkshopECS
+```
+
+Then create the new stack.
 ```bash
 cd ~/environment/modernization-workshop/modules/40_contrast_security
-aws cloudformation update-stack --stack-name WorkshopECS --template-body file://webgoat-ecs-fargate.yaml --parameters file://ecs-parameters.json --capabilities CAPABILITY_NAMED_IAM
+aws cloudformation create-stack --stack-name WorkshopECS --template-body file://webgoat-ecs-fargate.yaml --parameters file://ecs-parameters.json --capabilities CAPABILITY_NAMED_IAM
 
 until [[ `aws cloudformation describe-stacks --stack-name "WorkshopECS" --query "Stacks[0].[StackStatus]" --output text` == "CREATE_COMPLETE" ]]; do  echo "The stack is NOT in a state of CREATE_COMPLETE at `date`";   sleep 30; done && echo "The Stack is built at `date` - Please proceed"
 ```
@@ -61,7 +67,7 @@ The Stack is built at Sun Aug  4 05:37:28 UTC 2019 - Please proceed
 To test, run the following query and copy the URL you obtain from the output into the address bar of a web browser.  You should see something similar to the image below.
 
 ```bash
-aws elbv2 describe-load-balancers --names="Modernization-Workshop-LB" --query="LoadBalancers[0].DNSName" --output=text
+echo http://$(aws elbv2 describe-load-balancers --names="Modernization-Workshop-LB" --query="LoadBalancers[0].DNSName" --output=text)/WebGoat
 ```
 
 ![WebGoat UI](/images/contrast/wg_0.png)
@@ -71,6 +77,7 @@ We already have the pipeline setup that triggers off of changes ot the repositor
 
 ```bash
 cd ~/environment/modernization-workshop
+echo 'contrast_security.yaml' >> .gitignore && echo 'ecs-parameters.json' >> .gitignore
 git add .
 git commit -m "Changed pipeline to build WebGoat"
 git push origin master
