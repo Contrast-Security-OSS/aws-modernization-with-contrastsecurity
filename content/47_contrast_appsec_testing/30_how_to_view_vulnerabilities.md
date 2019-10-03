@@ -1,14 +1,14 @@
 +++
 title = "How to view vulnerabilities in Contrast"
 chapter = false
-weight = 20
+weight = 30
 +++
 
 There are several options to acquire information about vulnerabilities in Contrast Security:
 
-- In UI
-- Programmatically via API
-- Via various integrations (Jira, Slack, IDEs, etc.)
+- In the Contrast UI
+- Programmatically via API requests
+- Through various integrations (Jira, Slack, IDEs, etc.)
 
 
 ### Vulnerabilities in Contrast Security UI

@@ -1,7 +1,7 @@
 +++
 title = "How to discover a new vulnerability"
 chapter = false
-weight = 20
+weight = 10
 +++
 
 In this part we will discover a new vulnerability in Webgoat application and examine the finding in Contrast Security.

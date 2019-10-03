@@ -21,7 +21,7 @@ In order for you to succeed in this workshop, you will need to run through a few
    - Create stack click, **Next**
    - Specify stack details, click **Next**
    - Configure stack options, click **Next**
-   - Review Modernization Workshop, scroll to bottom section under **Capabilities** and check both boxes and click **Create stack** 
+   - Review UnicornDevSecOpsWorkshop, scroll to bottom section under **Capabilities** and check both boxes and click **Create stack** 
 
 >The deployment process takes approximately 2-3 minutes to complete. In the meantime, you can review the [deployment guide](https://aws-quickstart.s3.amazonaws.com/quickstart-cloud9-ide/doc/aws-cloud9-cloud-based-ide.pdf) while you wait.
 
@@ -33,15 +33,8 @@ Now we want to clone the repository that contains all the content and files you 
 
 ```bash
 cd ~/environment && \
-git clone https://github.com/aws-samples/aws-modernization-with-contrastsecurity modernization-workshop
+git clone https://github.com/jamesbland123/workshop-sample modernization-workshop
 cd modernization-workshop
-```
-
-### Initialize Submodules
-```bash
-git submodule init
-git submodule update
-cd ~/environment/modernization-workshop/modules/30_workshop_app
 git submodule init
 git submodule update
 ```

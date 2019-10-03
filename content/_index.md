@@ -1,10 +1,10 @@
 ---
-title: "AWS Modernization Workshop - Contrast Security"
+title: "AWS Modernization Workshop Sample"
 chapter: true
 weight: 1
 ---
 
-# AWS Modernization Workshop - Contrast Security
+# AWS Modernization Workshop Sample
 
 ### Welcome
 

@@ -4,7 +4,7 @@ chapter = false
 weight = 30
 +++
 
-Now let's see if WebGoat application was successfully hooked with Contrast Security Community Edition.
+Now let's see if WebGoat application was successfully instrumented with Contrast Security Community Edition.
 
 Please look for the number of instrumented applications in the top right and number of vulnerabilities (should be 1) in the middle of the page (should be 18).  
 
