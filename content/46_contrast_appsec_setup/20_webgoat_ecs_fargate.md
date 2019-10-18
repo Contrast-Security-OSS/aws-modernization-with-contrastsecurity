@@ -42,6 +42,11 @@ Let's delete the current ECS stack.
 aws cloudformation delete-stack --stack-name WorkshopECS
 ```
 
+Run the following command to check state of deletion. This may take a few minutes and will exit successfully (0) when done.
+```bash
+aws cloudformation wait stack-delete-complete --stack-name WorkshopECS && echo $?
+```
+
 Then create the new stack.
 ```bash
 cd ~/environment/modernization-workshop/modules/40_contrast_security
